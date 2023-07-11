@@ -1,0 +1,61 @@
+{% extends "bootstrap/base.html" %} {% block title %}Midjourney Image
+Generator{% endblock %} {% block styles %} {{ super() }}
+<style>
+  body {
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .btn-primary {
+    background: #9b59b6;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background: #8e44ad;
+  }
+
+  .form-label {
+    color: #fff;
+  }
+</style>
+{% endblock %} {% block content %}
+<div class="container">
+  <h1 class="mt-5 mb-3 text-center text-white">Midjourney Image Generator</h1>
+  <h3 class="text-center text-white mb-5">
+    Upscale Images up to 16X | Available in iPhone and WebP formats
+  </h3>
+  <form method="POST">
+    <div class="mb-3">
+      <label class="form-label">Text Prompt</label>
+      <input type="text" name="text_prompt" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Clipdrop API Key</label>
+      <input type="text" name="clipdrop_api_key" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Stability API Key</label>
+      <input type="text" name="stability_api_key" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Replicate API Token</label>
+      <input type="text" name="replicate_api_token" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">
+      Generate and Upscale Image
+    </button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download Page</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="download-container">
+      <h1 class="download-header">Download Your Images</h1>
+      <ul class="download-list">
+        <li>
+          <a class="download-link" href="/download/generated_image.png"
+            >Download Generated Image</a
+          >
+        </li>
+        <li>
+          <a class="download-link" href="/download/upscaled_image.png"
+            >Download ESRGAN Upscaled Image</a
+          >
+        </li>
+        <li>
+          <a class="download-link" href="/download/gfpgan_upscaled_image.png"
+            >Download GFPGAN Upscaled Image</a
+          >
+        </li>
+        <li>
+          <a class="download-link" href="/download/final_image.webp"
+            >Download WebP Image</a
+          >
+        </li>
+        <li>
+          <a class="download-link" href="/download/final_image_compressed.jpg"
+            >Download Compressed Image</a
+          >
+        </li>
+      </ul>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

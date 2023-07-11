@@ -1,0 +1,25 @@
+{% extends "bootstrap/base.html" %} {% block title %}Error{% endblock %} {%
+block styles %} {{ super() }}
+<style>
+  body {
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+</style>
+{% endblock %} {% block content %}
+<div class="container">
+  <h1 class="mt-5 mb-3 text-center text-white">An error occurred</h1>
+  <p class="text-white">{{ error }}</p>
+</div>
+{% endblock %}

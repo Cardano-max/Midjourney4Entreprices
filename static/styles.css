@@ -1,0 +1,24 @@
+body {
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    color: #ffffff;
+}
+
+.container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+h1 {
+    color: #ff5e62;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+    border: none;
+}
